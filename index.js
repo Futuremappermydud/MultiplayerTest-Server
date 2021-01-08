@@ -7,11 +7,12 @@ app.use(express.static(__dirname));
 
 
 app.get("/", function(req, res) {
- console.log("running on " + port);
+ res.render("index");
 })
 
-app.listen(port, function()) {
-}
+app.listen(port, function() {
+ console.log("running on " + port);
+})
 /*var server = require("http").Server(app);
  
 app.get("/", function(req, res)
