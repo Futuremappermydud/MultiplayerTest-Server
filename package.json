@@ -1,14 +1,23 @@
 {
   "name": "MultiplayerTest-Server",
   "version": "0.1.0",
-  "scripts":{
+  "scripts": {
     "start": "node index.js"
   },
-  "dependencies":{
-    "express": "^4.13.3",
-    "socket.io": "^3.0.5",
-    "shortid": "^2.2.16"
+  "dependencies": {
+    "express": "4.17.1"
   },
   "author": "Futuremapper",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Futuremappermydud/MultiplayerTest-Server.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Futuremappermydud/MultiplayerTest-Server/issues"
+  },
+  "homepage": "https://github.com/Futuremappermydud/MultiplayerTest-Server#readme",
+  "description": ""
 }
