@@ -10,31 +10,13 @@
 </head>
  
 <body>
-    <button onclick="getMyName();">Get My Name</button>
-    <button onclick="sendMyNameToAllClients();">Send my Name to all Clients</button>
+    <button onclick="Connect();">Connect</button>
     <script>
         var socket = io();
  
-        socket.emit("hello", { message: "hello from client!" });
- 
-        socket.on("onGetMyName", function(data)
+        function Connect()
         {
-            console.log("My Name: " + data.name);
-        });
- 
-        socket.on("onSendMyNameToAllClients", function(data)
-        {
-            console.log("Name of another client: " + data.name);
-        });
- 
-        function getMyName()
-        {
-            socket.emit("getMyName");
-        }
- 
-        function sendMyNameToAllClients()
-        {
-            socket.emit("sendMyNameToAllClients");
+            socket.emit("connection");
         }
     </script>
 </body>
