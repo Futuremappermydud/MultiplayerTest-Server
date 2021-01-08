@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <title>Multiplayer Snake</title>
+</head>
+ 
+<body>
+    <button onclick="getMyName();">Get My Name</button>
+    <button onclick="sendMyNameToAllClients();">Send my Name to all Clients</button>
+    <script>
+        var socket = io();
+ 
+        socket.emit("hello", { message: "hello from client!" });
+ 
+        socket.on("onGetMyName", function(data)
+        {
+            console.log("My Name: " + data.name);
+        });
+ 
+        socket.on("onSendMyNameToAllClients", function(data)
+        {
+            console.log("Name of another client: " + data.name);
+        });
+ 
+        function getMyName()
+        {
+            socket.emit("getMyName");
+        }
+ 
+        function sendMyNameToAllClients()
+        {
+            socket.emit("sendMyNameToAllClients");
+        }
+    </script>
+</body>
+ 
+</html>
