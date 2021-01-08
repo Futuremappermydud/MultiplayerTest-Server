@@ -2,7 +2,7 @@
   "name": "MultiplayerTest-Server",
   "version": "0.1.0",
   "scripts":{
-    "start": "node Client/index.js"
+    "start": "node index.js"
   },
   "dependencies":{
     "express": "^4.13.3"
