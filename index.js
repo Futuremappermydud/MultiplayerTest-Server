@@ -1,6 +1,18 @@
 var express = require("express");
 var app = express();
-var server = require("http").Server(app);
+
+var port = process.env.PORT || 7777
+
+app.use(express.static(__dirname));
+
+
+app.get("/", function(req, res) {
+ console.log("running on " + port);
+})
+
+app.listen(port, function()) {
+}
+/*var server = require("http").Server(app);
  
 app.get("/", function(req, res)
 {
@@ -31,3 +43,4 @@ io.sockets.on("connection", function(socket)
         console.log(clientName);
     });
 });
+*/
