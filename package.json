@@ -6,8 +6,7 @@
   },
   "dependencies":{
     "express": "^4.13.3",
-    "socket.io": "^3.0.5",
-    "http": "^15.5.1"
+    "socket.io": "^3.0.5"
   },
   "author": "Futuremapper",
   "license": "MIT"
